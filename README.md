@@ -1,1 +1,3 @@
 # graphql-api-server-blogging-app
+
+A GraphQL API server that provides API queries for creating a blogging app. More details for documentation will be added...
