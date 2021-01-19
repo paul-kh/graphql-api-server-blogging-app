@@ -1,0 +1,18 @@
+{
+  "name": "blogging-app-graphql-api",
+  "version": "1.0.0",
+  "description": "GraphQL API server that create API queries for a blogging auses MongoDB as storage engine, and mongoose as Object Document Models -ODM.",
+  "main": "app.js",
+  "scripts": {
+    "test": "n/a"
+  },
+  "keywords": [
+    "graphql",
+    "api",
+    "for",
+    "blogging",
+    "app"
+  ],
+  "author": "Paul Chheang",
+  "license": "ISC"
+}
