@@ -4,7 +4,9 @@
   "description": "GraphQL API server that create API queries for a blogging auses MongoDB as storage engine, and mongoose as Object Document Models -ODM.",
   "main": "app.js",
   "scripts": {
-    "test": "n/a"
+    "test": "n/a",
+    "start": "node app.js",
+    "start:dev": "nodemon app.js"
   },
   "keywords": [
     "graphql",
@@ -14,5 +16,13 @@
     "app"
   ],
   "author": "Paul Chheang",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
