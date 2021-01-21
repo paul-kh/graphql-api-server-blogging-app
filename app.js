@@ -1,6 +1,11 @@
-// IMPORTED MODULES
+// IMPORTED PACKAGES
 const express = require("express");
 const mongoose = require("mongoose");
+const { graphqlHTTP } = require("express-graphql");
+
+// IMPORTED MODULES
+const graphqlSchema = require("./graphql/schema");
+const graphqlResolver = require("./graphql/resolvers");
 
 // INIT INSTANCES
 const app = express();
@@ -19,6 +24,16 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
 });
+
+// GRAPHQL ROUTE MIDDLEWARE
+app.use(
+  "/graphql",
+  graphqlHTTP({
+    schema: graphqlSchema,
+    rootValue: graphqlResolver,
+    graphiql: true,
+  })
+);
 
 // CONNECT TO MONGODB & START SERVER
 mongoose
